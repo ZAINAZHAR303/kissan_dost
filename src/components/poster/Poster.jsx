@@ -25,6 +25,8 @@ const Poster = () => {
             <li><a href="#loans" className="hover:underline">Loans</a></li>
             <li><a href="#community" className="hover:underline">Community</a></li>
             <li><a href="#contact" className="hover:underline">Contact</a></li>
+          
+
           </ul>
         </div>
       </nav>
