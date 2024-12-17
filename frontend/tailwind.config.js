@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'poppinsSemibold': ['semibold'],
+        'poppinsMedium': ['Medium'],
+        'poppinsRegular': ['Regular'],
+        'poppinsLight': ['Light'],
+        
+      }
+
+    },
   },
   plugins: [],
 }

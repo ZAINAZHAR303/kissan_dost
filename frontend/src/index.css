@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: 'semibold';
+    src: local("Poppins-SemiBold"),
+    url('./assets/Poppins-SemiBold.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'Medium';
+    src: local("Poppins-Medium"),
+    url('./assets/Poppins-Medium.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'Regular';
+    src: local("Poppins-Regular"),
+    url('./assets/Poppins-Regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'Light';
+    src: local("Poppins-Light"),
+    url('./assets/Poppins-Light.ttf') format("truetype");
+}

@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Navbar } from './components/Navbar/Navbar';
-import { LoanFinder } from './components/LoanFinder/LoanFinder';
-import { FarmerCommunity } from './components/FarmerCommunity/FarmerCommunity';
 
-export const App = () => {
+
+import { Navbar } from './components/Navbar/Navbar';
+// import { LoanFinder } from './components/LoanFinder/LoanFinder';
+// import { FarmerCommunity } from './components/FarmerCommunity/FarmerCommunity';
+import { HomePage } from './pages/homepage/HomePage';
+
+
+const App = () => {
   const sampleLoans = [
     {
       name: "Crop Loan",
@@ -24,11 +24,8 @@ export const App = () => {
 
   return (
     <div>
-      <Navbar />
-      <LoanFinder loans={sampleLoans} />
-      <FarmerCommunity />
+      <HomePage />
     </div>
   );
 };
-
 export default App;
