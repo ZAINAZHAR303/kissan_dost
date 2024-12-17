@@ -8,7 +8,7 @@ const Poster = () => {
      
 
   <video
-    src="posterfin.mp4"
+    src="posterfin2.mp4"
     autoPlay
     loop
     muted
