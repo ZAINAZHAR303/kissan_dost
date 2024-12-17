@@ -1,6 +1,7 @@
 import React from "react";
 import "./loans.css";
 import { FaHandshake, FaClipboardList, FaSeedling } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function LoansIntro() {
   return (
     <div className="relative   mt-10 animate-fadeIn flex flex-col lg:flex-row lg:gap-4">
@@ -42,11 +43,11 @@ function LoansIntro() {
           </li>
         </ul>
         <div className="mt-6 lg:mt-15 flex w-full  justify-center space-x-4">
-        <a
-          href="/loan-finder"
-          className="bg-green-600 font-poppinsMedium text-white py-2 px-4 rounded-lg w-full lg:w-[400px]  shadow-md hover:bg-green-700 transition-colors duration-300">
+        <Link to="LoanFinder" className="bg-green-600 font-poppinsMedium text-white py-2 px-4 rounded-lg w-full lg:w-[400px]  shadow-md hover:bg-green-700 transition-colors duration-300">
           Explore Loans
-        </a>
+        </Link>
+        
+        
       </div>
       </div>
      

@@ -4,6 +4,7 @@
 // import { LoanFinder } from './components/LoanFinder/LoanFinder';
 // import { FarmerCommunity } from './components/FarmerCommunity/FarmerCommunity';
 import { HomePage } from './pages/homepage/HomePage';
+import Routing from './Routing/Routing';
 
 
 const App = () => {
@@ -24,7 +25,7 @@ const App = () => {
 
   return (
     <div>
-      <HomePage />
+      <Routing/>
     </div>
   );
 };

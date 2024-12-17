@@ -2,6 +2,7 @@ import React from "react";
 // import { motion } from 'framer-motion';
 
 import { FaUsers, FaChalkboardTeacher, FaTools } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const CommunityIntro = () => {
   return (
@@ -42,11 +43,12 @@ const CommunityIntro = () => {
           </li>
         </ul>
         <div className="mt-6 flex w-full  justify-center space-x-4">
-        <a
-          href="/community"
-          className="bg-gray-600 w-full lg:w-[400px] font-poppinsMedium text-white py-3 px-6 rounded-lg shadow-md hover:bg-gray-700 transition-transform transform hover:scale-105">
+        <Link to="/FarmerCommunity" className="bg-gray-600 w-full lg:w-[400px] font-poppinsMedium text-white py-3 px-6 rounded-lg shadow-md hover:bg-gray-700 transition-transform transform hover:scale-105">
           Explore Community
-        </a>
+        </Link>
+        
+        
+        
       </div>
       </div>
     
