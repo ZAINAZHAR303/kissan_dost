@@ -1,6 +1,6 @@
 
 
-import { Navbar } from './components/Navbar/Navbar';
+// import { Navbar } from './components/Navbar/Navbar';
 // import { LoanFinder } from './components/LoanFinder/LoanFinder';
 // import { FarmerCommunity } from './components/FarmerCommunity/FarmerCommunity';
 import { HomePage } from './pages/homepage/HomePage';
