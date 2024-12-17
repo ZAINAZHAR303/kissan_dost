@@ -1,4 +1,5 @@
 import React from "react";
+import { Link} from "react-router-dom";
 // import { Navbar } from "../Navbar/Navbar";
 
 const Poster = () => {
@@ -21,10 +22,10 @@ const Poster = () => {
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">AgriConnect</h1>
           <ul className="flex space-x-4">
-            <li><a href="#home" className="hover:underline">Home</a></li>
-            <li><a href="#loans" className="hover:underline">Loans</a></li>
-            <li><a href="#community" className="hover:underline">Community</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
+            <li><Link to="/" className="hover:underline">Home</Link></li>
+            <li><Link to="/loanfinder"className="hover:underline">Loans</Link></li>
+            <li><Link to="/FarmerCommunity" className="hover:underline">Community</Link></li>
+            <li><Link to="/Contact" className="hover:underline">Contact</Link></li>
           
 
           </ul>
