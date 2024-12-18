@@ -1,10 +1,13 @@
 from flask import Flask, request, jsonify
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from flask_cors import CORS
 import os
+import re
+
 
 # Initialize Flask app
 app = Flask(__name__)
-
+CORS(app) 
 # Load the fine-tuned GPT-2 model and tokenizer
 model_dir = os.path.join(os.getcwd(), "gpt2-agriculture")
 
@@ -29,9 +32,18 @@ def generate_text():
 
     # Encode input and generate response
     inputs = tokenizer.encode(input_text, return_tensors="pt")
-    outputs = model.generate(inputs, max_length=50, num_return_sequences=1)
+    outputs = model.generate(inputs, max_length=100, num_return_sequences=1, eos_token_id=tokenizer.eos_token_id,no_repeat_ngram_size=3,temperature=0.7,top_k=50,)
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    if response.lower().startswith(input_text.lower()):
+        response = response[len(input_text):].strip()
+        
+        # Add new lines before each heading
+    response = re.sub(r"(- \*\*[^:]+\*\*:)", r"\n\1", response).strip()
 
+    # Replace **text** with <strong>text</strong>
+    response = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", response)
+    
+    
     # Send the response back
     return jsonify({"response": response})
 

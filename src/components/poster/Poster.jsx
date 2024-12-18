@@ -1,5 +1,6 @@
 import React from "react";
 import { Link} from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 // import { Navbar } from "../Navbar/Navbar";
 
 const Poster = () => {
@@ -9,16 +10,16 @@ const Poster = () => {
      
 
   <video
-    src="posterfin2.mp4"
+    src="Posterfin2.mp4"
     autoPlay
     loop
     muted
     playsInline
     className="absolute inset-0 w-full h-full object-cover"
   ></video>
-
+  <Navbar />
   <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
-  <nav className="bg-green-600 inset-0 absolute z-20 h-[50px] text-white p-4">
+  {/* <nav className="bg-green-600 inset-0 absolute z-20 h-[50px] text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">AgriConnect</h1>
           <ul className="flex space-x-4">
@@ -30,7 +31,8 @@ const Poster = () => {
 
           </ul>
         </div>
-      </nav>
+      </nav> */}
+      
   
   <div className="absolute inset-0 flex flex-col items-center justify-center text-center  text-white px-4">
   {/* <Navbar /> */}
