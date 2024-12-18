@@ -1,36 +1,39 @@
 import React from 'react';
 import './About.css';
-import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer';
 
 const About = () => {
   return (
     <>
-        <Navbar/>
+    
+    <div className="about-page">
       <div className="about-container">
-      <div className="card">
-        <img src="" alt="My Pic" className="card-img" />
-        <div className="card-content">
-          <h2>My Name</h2>
-          <p>Bio: Your bio data goes here. You can add details like education, interests, and more.</p>
+        <div className="card">
+          <img src="src/assets/zubair.jpeg" alt="Zubair" className="card-img" />
+          <div className="card-content">
+            <h2>M Zubair Shehzad</h2>
+            <p><h2>Backend Developer</h2></p>
+          </div>
         </div>
-      </div>
 
-      <div className="card">
-        <img src="" alt="Friend Pic" className="card-img" />
-        <div className="card-content">
-          <h2>Friend's Name</h2>
-          <p>Bio: Friend's bio data goes here.</p>
+        <div className="card">
+          <img src="src/assets/zain.jpeg" alt="Zain" className="card-img" />
+          <div className="card-content">
+            <h2>Zain Azhar</h2>
+            <p> <h2>AI chatbot Developer <br />Data Scrapper</h2></p>
+          </div>
         </div>
-      </div>
 
-      <div className="card">
-        <img src="another-picture-url.jpg" alt="Another Pic" className="card-img" />
-        <div className="card-content">
-          <h2>Another Person's Name</h2>
-          <p>Bio: Another bio data goes here.</p>
+        <div className="card">
+          <img src="src/assets/Haseeb.jpeg" alt="Haseeb" className="card-img" />
+          <div className="card-content">
+            <h2>M Haseeb Younas</h2>
+            <p><h2>Frontend Developer</h2></p>
+          </div>
         </div>
       </div>
     </div>
+    <Footer/>
     </>
   );
 };
