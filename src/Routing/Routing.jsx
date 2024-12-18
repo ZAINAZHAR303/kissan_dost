@@ -5,6 +5,7 @@ import { FarmerCommunity } from '../pages/FarmerCommunity/FarmerCommunity';
 import { LoanFinder } from '../pages/LoanFinder/LoanFinder';
 import Contact from '../pages/Contact/Contact';
 import About from '../pages/About/About';
+import ChatBot from '../pages/chatbot/ChatBot';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
     path: "/About",
     element: <About/>,
   },
+  {
+    path: "/chatbot",
+    element: <ChatBot/>,
+  }
 ]);
 
 function Routing() {

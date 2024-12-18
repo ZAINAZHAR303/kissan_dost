@@ -3,6 +3,8 @@
 // import { Navbar } from './components/Navbar/Navbar';
 // import { LoanFinder } from './components/LoanFinder/LoanFinder';
 // import { FarmerCommunity } from './components/FarmerCommunity/FarmerCommunity';
+import { AddThoughts } from './pages/addThoughts/AddThoughts';
+import { FarmerCommunity } from './pages/FarmerCommunity/FarmerCommunity';
 import { HomePage } from './pages/homepage/HomePage';
 import Routing from './Routing/Routing';
 
