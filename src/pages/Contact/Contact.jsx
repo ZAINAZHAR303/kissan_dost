@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Contact = () => {
   const form = useRef();
@@ -31,6 +32,8 @@ const Contact = () => {
 
   return (
     <>
+    {/* <Navbar /> */}
+    
     <div className="contact-container">
       <h2>Contact Us</h2>
       <form ref={form} onSubmit={sendEmail} className="contact-form">

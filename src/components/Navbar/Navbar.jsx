@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute inset-0 z-10 mt-8  px-12">
+    <nav className="absolute inset-0 z-10 pt-8   px-12">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-white h-[100px] w-[100px] font-bold text-xl">
@@ -49,7 +49,7 @@ const Navbar = () => {
 
       {/* Mobile Navbar Links */}
       <div
-  className={`md:hidden flex flex-col items-center justify-start absolute top-16 left-0 w-full bg-black bg-opacity-7 0 p-6 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out ${isMenuOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}
+  className={`md:hidden flex flex-col items-center justify-start absolute top-16 left-0 w-full bg-black bg-opacity-3 0 p-6 rounded-lg shadow-lg transform transition-all duration-300 ease-in-out ${isMenuOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}
 >
   <Link to="/"
     

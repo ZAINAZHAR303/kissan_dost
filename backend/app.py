@@ -3,7 +3,7 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer
 from flask_cors import CORS
 import os
 import re
-
+from markdown import markdown
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -38,14 +38,27 @@ def generate_text():
         response = response[len(input_text):].strip()
         
         # Add new lines before each heading
-    response = re.sub(r"(- \*\*[^:]+\*\*:)", r"\n\1", response).strip()
+    # response = re.sub(r"(- \*\*[^:]+\*\*:)", r"\n\1", response).strip()
 
-    # Replace **text** with <strong>text</strong>
-    response = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", response)
+    # # Replace **text** with <strong>text</strong>
+    # response = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", response)
     
-    
-    # Send the response back
-    return jsonify({"response": response})
+    response = re.sub(r"(?<!\*)\*(?!\*)", "", response)  # Remove stray single asterisks
+    response = re.sub(r"\*\*+", "**", response)  # Ensure balanced ** pairs
+    response = re.sub(r"\n\s*\n", "\n", response)  # Remove excessive newlines
+    response = re.sub(r"^\s+|\s+$", "", response)  # Trim leading/trailing spaces
+
+    try:
+        # Convert Markdown to HTML
+        html_response = markdown(response)
+    except Exception as e:
+        print(f"Markdown conversion error: {e}")
+        html_response = response  # Fallback to raw text
+
+    print("Raw response:", response)
+    print("HTML response:", html_response)
+
+    return jsonify({"response": html_response})
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

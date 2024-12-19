@@ -13,17 +13,41 @@ export const FarmerCommunity = () => {
             maxBodyLength: Infinity,
             url: "http://localhost:7000/experince/get",
         };
+        // <div className="flex justify-between items-center mt-4">
+        //                             {/* Delete Button */}
+        //                             <button
+        //                                 className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all duration-300"
+        //                                 onClick={() => onDeleteHander(item._id)}
+        //                             >
+        //                                 Delete
+        //                             </button>
+
+        //                             {/* Update Button */}
+        //                             <button
+        //                                 className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300"
+        //                                 onClick={() => onUpdateHandler(item)}
+        //                             >
+        //                                 Update
+        //                             </button>
+        //                         </div>
 
         axios
             .request(config)
             .then((response) => {
                 console.log("Fetched Data:", response.data);
                 setData(response.data.data);
+                console.log("Data:", response.data);
+                
             })
             .catch((error) => {
                 console.error("Axios error:", error);
             });
     }, []);
+useEffect( ()=>{
+    const token = localStorage.getItem("token")
+    console.log("token",token);
+    
+},[])
 
     const onUpdateHandler = (data) => {
         console.log(data);
@@ -86,32 +110,16 @@ export const FarmerCommunity = () => {
                             <div className="p-6">
                                 {/* Title */}
                                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                                    {item.title}
+                                    {/* {item.title} */}
                                 </h3>
 
                                 {/* Description */}
-                                <p className="text-gray-600 text-sm mb-4">
+                                <p className="text-green-600 text-md mb-3">
                                     {item.description}
                                 </p>
 
                                 {/* Actions */}
-                                <div className="flex justify-between items-center mt-4">
-                                    {/* Delete Button */}
-                                    <button
-                                        className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all duration-300"
-                                        onClick={() => onDeleteHander(item._id)}
-                                    >
-                                        Delete
-                                    </button>
-
-                                    {/* Update Button */}
-                                    <button
-                                        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all duration-300"
-                                        onClick={() => onUpdateHandler(item)}
-                                    >
-                                        Update
-                                    </button>
-                                </div>
+                                
                             </div>
                         </li>
                     ))}

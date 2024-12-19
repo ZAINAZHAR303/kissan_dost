@@ -6,6 +6,8 @@ import { LoanFinder } from '../pages/LoanFinder/LoanFinder';
 import Contact from '../pages/Contact/Contact';
 import About from '../pages/About/About';
 import ChatBot from '../pages/chatbot/ChatBot';
+import { Login } from '../pages/login/Login';
+import { AddThoughts } from '../pages/addThoughts/AddThoughts';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,11 @@ const router = createBrowserRouter([
     path: "/loanfinder",
     element: <LoanFinder/> ,
   },
+  {
+    path: "/login",
+    element: <Login/> ,
+  },
+  
   {
     path: "/FarmerCommunity",
     element: <FarmerCommunity />,
@@ -31,6 +38,11 @@ const router = createBrowserRouter([
   {
     path: "/chatbot",
     element: <ChatBot/>,
+  },
+  
+  {
+    path: "/addThoughts",
+    element: <AddThoughts/>,
   }
 ]);
 

@@ -61,8 +61,8 @@ const ChatBot = () => {
           </div>
         )}
         {output && (
-          <div className="flex items-start gap-2">
-            <FaRobot className="text-green-500 mt-1" />
+          <div className="flex items-start w-[80%] gap-4">
+            <FaRobot className="text-green-500 mt-1 text-2xl " />
             <p className="bg-gray-100 px-4 py-2 rounded-md">{output}</p>
           </div>
         )}

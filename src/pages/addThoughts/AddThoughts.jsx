@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios"; // Move axios to the top for cleaner code
+import { Link } from "react-router-dom";
 
 export const AddThoughts = () => {
     const [title, setTitle] = useState("");
@@ -38,6 +39,7 @@ export const AddThoughts = () => {
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
             <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
+                
                 <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">
                     Add Your Thoughts
                 </h2>
@@ -86,6 +88,7 @@ export const AddThoughts = () => {
 
                     {/* Submit Button */}
                     <div className="text-center">
+                    <Link to={"/FarmerCommunity"}>
                         <button
                             type="button"
                             onClick={onAddProductHandler}
@@ -93,6 +96,7 @@ export const AddThoughts = () => {
                         >
                             Submit Thoughts
                         </button>
+                        </Link>
                     </div>
 
                     {/* Success/Error Message */}
@@ -104,5 +108,5 @@ export const AddThoughts = () => {
                 </form>
             </div>
         </div>
-    );
+    );
 };
